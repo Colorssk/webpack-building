@@ -15,10 +15,32 @@ module.exports={
     },
     module:{
         rules:[
+            // loader默认的分类： pre在前面的，中间的normal,再是inline再是post 在后面的
+            // {
+            //     test:'/\.js$/',
+            //     use:['loader3','loader2','loader1']// 用自己写的loader
+            // }
             {
                 test:'/\.js$/',
-                use:'loader1'// 用自己写的loader
-            }
+                use:{
+                    loader:'loader1'
+                },
+                enforce: 'pre'
+            },
+            {
+                test:'/\.js$/',
+                use:{
+                    loader:'loader2'
+                },
+                enforce:'normal'
+            },
+            {
+                test:'/\.js$/',
+                use:{
+                    loader:'loader3'
+                },
+                enforce:'post'
+            },
         ]
     }
 }
