@@ -20,3 +20,8 @@ pitch:  1:loader3->2:loader2
 normal:  3:loader3<-    
 
 (ptich中有返回值会阻断)（loader1）
+
+
+编写babel:
+准备：
+install  @babel/core @babel/preset-env loader-utils（工具类获取webpack中options）
