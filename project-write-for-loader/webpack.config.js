@@ -6,6 +6,7 @@ module.exports={
         filname:'build.js',
         path:path.resolve(__dirname,'dist')
     },
+    watch:true,
     resolveLoader:{
         // 配置别名下面直接写'loader1'
         // alias:{
@@ -42,14 +43,24 @@ module.exports={
             //     },
             //     enforce:'post'
             // },
+            // {
+            //     test:/\.js$/,
+            //     user:{
+            //         loader:'babel-loader',
+            //         options:{
+            //             presets:[// 使用loader之前先调用预设
+            //                 '@babel/preset-env'
+            //             ]
+            //         }
+            //     }
+            // },
             {
                 test:/\.js$/,
-                user:{
-                    loader:'babel-loader',
+                use:{// 注释loader
+                    loader:'banner-loader',
                     options:{
-                        presets:[// 使用loader之前先调用预设
-                            '@babel/preset-env'
-                        ]
+                        text:'Colorssk',
+                        filename:path.resolve(__dirname,'banner.js')
                     }
                 }
             }

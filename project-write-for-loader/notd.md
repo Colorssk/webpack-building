@@ -20,6 +20,7 @@ pitch:  1:loader3->2:loader2
 normal:  3:loader3<-    
 
 (ptich中有返回值会阻断)（loader1）
+校验获取到的参数（laoder开发中的校验）安装： schema-utils
 
 
 编写babel:
