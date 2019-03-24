@@ -54,16 +54,32 @@ module.exports={
             //         }
             //     }
             // },
+            // {
+            //     test:/\.js$/,
+            //     use:{// 注释loader
+            //         loader:'banner-loader',
+            //         options:{
+            //             text:'Colorssk',
+            //             filename:path.resolve(__dirname,'banner.js')
+            //         }
+            //     }
+            // },
             {
-                test:/\.js$/,
-                use:{// 注释loader
-                    loader:'banner-loader',
-                    options:{
-                        text:'Colorssk',
-                        filename:path.resolve(__dirname,'banner.js')
+                test:/\.jpg$/,
+                use:{
+                    // 目的： 根据图片生成一个md5.发射到dist目录，还会返回当前图片的图片路径
+                    // loader:'file-laoder'
+                    // url-loader
+                    use:{
+                        loader:'url-loader',
+                        options:{
+                            limit:200*1024
+                        }
+
                     }
                 }
             }
+
         ]
     }
 }

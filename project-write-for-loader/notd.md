@@ -26,3 +26,5 @@ normal:  3:loader3<-
 编写babel:
 准备：
 install  @babel/core @babel/preset-env loader-utils（工具类获取webpack中options）
+
+获取图片类型下载 mime
