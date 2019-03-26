@@ -64,20 +64,24 @@ module.exports={
             //         }
             //     }
             // },
-            {
-                test:/\.jpg$/,
-                use:{
-                    // 目的： 根据图片生成一个md5.发射到dist目录，还会返回当前图片的图片路径
-                    // loader:'file-laoder'
-                    // url-loader
-                    use:{
-                        loader:'url-loader',
-                        options:{
-                            limit:200*1024
-                        }
+            // {
+            //     test:/\.jpg$/,
+            //     use:{
+            //         // 目的： 根据图片生成一个md5.发射到dist目录，还会返回当前图片的图片路径
+            //         // loader:'file-laoder'
+            //         // url-loader
+            //         use:{
+            //             loader:'url-loader',
+            //             options:{
+            //                 limit:200*1024
+            //             }
 
-                    }
-                }
+            //         },
+            //     }
+            // },
+            {
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
             }
 
         ]

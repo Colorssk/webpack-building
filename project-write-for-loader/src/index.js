@@ -4,7 +4,9 @@ console.log(hello)
 let str  = require('-！inline-loader!./a.js')// 表示把a.js导入到前面的inline-loader中去(行内loader)
 
 //图片的应用 url-loader/file-loader
-import p from './img.jpg'
-let img = document.createElement('img')
-img.src = p
-document.body.appendChild(img)
+// import p from './img.jpg'
+// let img = document.createElement('img')
+// img.src = p
+// document.body.appendChild(img)
+// 样式的引用
+import './index.less'
