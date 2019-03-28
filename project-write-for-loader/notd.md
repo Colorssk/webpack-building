@@ -1,5 +1,7 @@
+webpack-loader:
+
 loader包含两个模块ptich loader和normal loader
- 
+
 module:[
     rules:[
         {
