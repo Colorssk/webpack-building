@@ -76,7 +76,7 @@ import require的用法差异
 正常是直接import调用
 例子： import test from './test.js'
 
- 直接电泳test.sum()方法
+ 直接调用test.sum()方法
 
 但是也可以用require，因为es6打包的时候会默认放入default中
 let test = require('./test.js')
@@ -99,3 +99,4 @@ if(module.hot){
         .......
     })
 }
+
