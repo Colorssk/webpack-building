@@ -1,7 +1,5 @@
-webpack-loader:
-
 loader包含两个模块ptich loader和normal loader
-
+ 
 module:[
     rules:[
         {
@@ -11,7 +9,7 @@ module:[
     ]
 ]
 
-正常流程(loader都有返回值)
+正常流程(loader都有返回值)style-loader；css-loder； less-loader: 如果style-loader写了pitch那么就会阻断下面的所有normal操作：在style-loader中require(!!css-loader!less-loader!index.less)又很好的指明了源码传递方向
 pitch:  1:loader3->2:loader2->3:loader1
                                         传入资源
 normal:  3:loader3<-2:loader2<-1:loader1       
@@ -22,7 +20,7 @@ pitch:  1:loader3->2:loader2
 normal:  3:loader3<-    
 
 (ptich中有返回值会阻断)（loader1）
-校验获取到的参数（laoder开发中的校验）安装： schema-utils
+校验获取到的参数（loader开发中的校验）安装： schema-utils
 
 
 编写babel:
