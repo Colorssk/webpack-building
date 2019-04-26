@@ -1,5 +1,5 @@
 loader包含两个模块ptich loader和normal loader
-
+ 
 module:[
     rules:[
         {
@@ -27,4 +27,4 @@ normal:  3:loader3<-
 准备：
 install  @babel/core @babel/preset-env loader-utils（工具类获取webpack中options）
 
-获取图片类型下载 mime（tool）
+获取图片类型下载 mime

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin":{
-    "ym-pack":"./bin/ym-pack"
+  "bin": {
+    "ym-pack": "./bin/ym-pack"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.3.4",
     "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.1"
   },
   "dependencies": {
     "autoprefixer": "^9.4.9",
