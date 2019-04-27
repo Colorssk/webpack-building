@@ -2,6 +2,7 @@
  let DonePlugin = require('./plugins/DonePlugin')
  let HtmlPlugin = require('html-webpack-plugin')
  let FileListPlugin = require('./plugins/FileListPlugin')
+ let Inlineplugin = require('./plugins/inlineplugin') 
 module.exports = {
     // mode:'development',
     entry: './src/index.js',
@@ -16,6 +17,9 @@ module.exports = {
         new DonePlugin(),
         new FileListPlugin({
             filename:'list.md'
+        }),
+        new Inlineplugin({
+            match:/\.(js|css)/
         })
     ]
 }
